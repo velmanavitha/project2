@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('images/bg2.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bird {
+	height: 100px;
+	width: 130px;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background:radial-gradient(lightpink 50%, lightcoral);
+	border: 5px solid black;
+}
+.message {
+	position: absolute;
+	z-index: 10;
+	color: black;
+	top: 30%;
+	left: 50%;
+	font-size: 4em;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.messageStyle{
+	background: white;
+	padding: 30px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 5%;
+}
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 10vh;
+	font-weight: 100;
+	color: white;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 0;
+	left: 0;
+	margin: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.score_val {
+	color: gold;
+	font-weight: bold;
+}
+
+/*  for Mobile Devices (*/
+@media screen and (max-width: 576px) {
+	.background {
+		height: 100vh;
+		width: 100%;
+		background-size: cover;
+	}
+	.message {
+		font-size: 2em;
+		top: 50%;
+	}
+	.score {
+		font-size: 4vh;
+	}
+	.bird {
+		width: 60px;
+		height: 30px;
+	}
+	.pipe_sprite {
+		width: 7vw;
+	}
+}
+
+/*  for Laptops  */
+@media screen and (min-width: 577px) and (max-width: 1200px) {
+	.bird {
+		width: 90px;
+		height: 50px;
+	}
+	.pipe_sprite {
+		width: 6.5vw;
+	}
+	.message {
+		font-size: 3em;
+		top: 35%;
+	}
+	.score {
+		font-size: 6vh;
+	}
+}
